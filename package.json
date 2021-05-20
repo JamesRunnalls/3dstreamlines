@@ -1,0 +1,31 @@
+{
+  "name": "3dstreamlines",
+  "version": "1.0.0",
+  "description": "Visualise three dimensional vector fields in threejs using stream lines.",
+  "main": "src/3dstreamlines.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesRunnalls/3dstreamlines.git"
+  },
+  "homepage": "https://www.3dstreamlines.com/",
+  "keywords": [
+    "3d",
+    "streamlines",
+    "graph",
+    "three",
+    "velocity",
+    "webgl"
+  ],
+  "author": {
+    "name": "James Runnalls",
+    "email": "runnalls.james@gmail.com",
+    "url": "https://www.linkedin.com/in/jamesrunnalls/"
+  },
+  "dependencies": {
+    "three": "^0.119.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
