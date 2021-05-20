@@ -113,7 +113,7 @@ class StreamLines {
     this.add();
   }
 
-  verifyInputs = (data, bounds, scene, options) => {
+  verifyInputs(data, bounds, scene, options) {
     if (scene.type !== "Scene") {
       throw new Error("Invalid Scene object");
     }
@@ -187,9 +187,9 @@ class StreamLines {
         );
       }
     }
-  };
+  }
 
-  computeBounds = (data, bounds) => {
+  computeBounds(data, bounds) {
     if (!this.yarr) {
       bounds["yLen"] = data.u.length;
       bounds["yMin"] = parseFloat(bounds["yMin"]);
@@ -209,9 +209,9 @@ class StreamLines {
       bounds["zSize"] = (bounds["zMax"] - bounds["zMin"]) / bounds["zLen"];
     }
     return bounds;
-  };
+  }
 
-  getValidCells = () => {
+  getValidCells() {
     this.validCells = [];
     for (let i = 0; i < this.bounds["yLen"]; i++) {
       for (let j = 0; j < this.bounds["xLen"]; j++) {
@@ -227,9 +227,9 @@ class StreamLines {
         }
       }
     }
-  };
+  }
 
-  add = () => {
+  add() {
     var vertexShader = `
       precision mediump float;
       precision mediump int;
@@ -294,9 +294,9 @@ class StreamLines {
       console.error(e);
       throw new Error("Invalid Scene object");
     }
-  };
+  }
 
-  initialPositions = () => {
+  initialPositions() {
     var pl = this.validCells.length - 1;
     for (var i = 0; i < this.streamlines.children.length; i++) {
       let line = this.streamlines.children[i];
@@ -323,9 +323,9 @@ class StreamLines {
       positions[5] = positions[2];
       line.geometry.attributes.position.needsUpdate = true;
     }
-  };
+  }
 
-  animate = () => {
+  animate() {
     var pl = this.validCells.length - 1;
     for (var i = 0; i < this.streamlines.children.length; i++) {
       let line = this.streamlines.children[i];
@@ -411,9 +411,9 @@ class StreamLines {
         line.geometry.attributes.color.needsUpdate = true;
       }
     }
-  };
+  }
 
-  nextPosition = (xin, yin, zin) => {
+  nextPosition(xin, yin, zin) {
     var i = this.yarr
       ? indexOfClosest(yin, this.data.y)
       : Math.round((yin - this.bounds.yMin) / this.bounds.ySize);
@@ -443,34 +443,34 @@ class StreamLines {
     } else {
       return false;
     }
-  };
+  }
 
-  setColors = (colors) => {
+  setColors(colors) {
     var colorBar = [];
     for (let i = 0; i < this.individualColors + 1; i++) {
       colorBar.push(getBinaryColor(i, 0, 99, colors));
     }
     this.colors = colors;
     this.colorBar = colorBar;
-  };
+  }
 
-  setVelocityFactor = (velocityFactor) => {
+  setVelocityFactor(velocityFactor) {
     this.velocityFactor = velocityFactor;
-  };
+  }
 
-  setMaxAge = (maxAge) => {
+  setMaxAge(maxAge) {
     this.maxAge = maxAge;
-  };
+  }
 
-  setNoParticles = (noParticles) => {
+  setNoParticles(noParticles) {
     this.scene.remove(this.streamlines);
     this.noParticles = noParticles;
     this.add();
-  };
+  }
 
-  clearStreamlines = () => {
+  clearStreamlines() {
     this.scene.remove(this.streamlines);
-  };
+  }
 }
 
 export default StreamLines;

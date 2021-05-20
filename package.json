@@ -1,6 +1,6 @@
 {
   "name": "3dstreamlines",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Visualise three dimensional vector fields in threejs using stream lines.",
   "main": "src/3dstreamlines.js",
   "repository": {
