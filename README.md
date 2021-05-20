@@ -1,20 +1,18 @@
 # 3D Streamlines
 
-[![NPM package][npm-img]][npm-url]
-[![Build Size][build-size-img]][build-size-url]
-[![Dependencies][dependencies-img]][dependencies-url]
-
-<p align="center">
-     <a href=""><img width="80%" src="https://en.wikipedia.org/wiki/Lake_Geneva#/media/File:Lake_Geneva_by_Sentinel-2.jpg"></a>
-</p>
+[![npm version](https://badge.fury.io/js/3dstreamlines.svg)](https://badge.fury.io/js/3dstreamlines)
 
 Visualise three dimensional vector fields in browser using stream lines.
+
+![Image of Lake Geneva](https://3dstreamlines.s3.eu-central-1.amazonaws.com/tornado.png)
+
 
 Uses [ThreeJS](https://github.com/mrdoob/three.js/)/WebGL for 3D rendering.
 
 Check out the examples:
 
-- [Tornado](https://jamesrunnalls.github.io/3dstreamlines/example/tornado/) ([source](https://github.com/jamesrunnalls/3dstreamlines/blob/master/example/tornado/index.html))
+- [Basic](https://jamesrunnalls.github.io/3dstreamlines/example/basic/) ([source](https://github.com/jamesrunnalls/3dstreamlines/blob/master/example/basic/index.html))
+- [Viewer](https://3dstreamlines.com) ([source](https://github.com/JamesRunnalls/3dstreamlines-viewer))
 
 ## Quick start
 
