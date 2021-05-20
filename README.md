@@ -17,13 +17,13 @@ Check out the examples:
 ## Quick start
 
 ```
-import 3dstreamlines from '3dstreamlines';
+import StreamLines from '3dstreamlines';
 ```
 
 or
 
 ```
-var 3dstreamlines = require('3dstreamlines');
+var StreamLines = require('3dstreamlines');
 ```
 
 or even
@@ -35,7 +35,7 @@ or even
 then
 
 ```
-const streamlines = new 3dstreamlines(data, bounds, scene, options);
+const streamlines = new StreamLines(data, bounds, scene, options);
 ```
 
 ## API reference
@@ -43,7 +43,7 @@ const streamlines = new 3dstreamlines(data, bounds, scene, options);
 ### Initialisation
 
 ```
-3dstreamlines(data, bounds, scene, options)
+StreamLines(data, bounds, scene, options)
 ```
 
 ### data
